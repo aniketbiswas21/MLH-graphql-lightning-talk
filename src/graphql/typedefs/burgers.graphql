@@ -1,0 +1,20 @@
+type Burger {
+  id: ID!
+  name: String!
+  price: Int!
+  brand: String
+  description: String
+}
+
+type Query {
+  getBurgers: [Burger!]!
+}
+
+type Mutation {
+  createBurger(
+    id: ID!
+    name: String!
+    price: Int!
+    description: String
+  ): Burger!
+}
